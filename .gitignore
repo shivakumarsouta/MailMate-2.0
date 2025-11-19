@@ -1,0 +1,25 @@
+# Ignore compiled Python files and cache folders everywhere
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Ignore the virtual environment (venv is named mailmate)
+mailmate/
+
+# Ignore environment/config secrets
+.env
+*.env
+secrets.toml
+
+# Ignore Streamlit config & secrets
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Ignore IDE/editor junk
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore logs, dbs, and system-generated files
+*.log
+*.sqlite3
