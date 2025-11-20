@@ -6,7 +6,7 @@ from agents.email_agent import (
 )
 from utils.email_sender import send_email
 
-st.set_page_config(page_title="MailMate 2.0", layout="wide")
+st.set_page_config(page_title="MailMate 2.0", page_icon= "favicon.ico", layout="wide")
 st.title("📨 MailMate 2.0: AI Powered Email Assistant")
 
 st.markdown("""

@@ -6,6 +6,10 @@ With automatic summarization, tone selection, length control, and editable AI-po
 
 ---
 
+You can view the app live at [MailMate-2.0](https://mailmate-2.0.streamlit.app)
+
+---
+
 ## 🚀 Features
 
 | Feature                         | Description                                                                |
