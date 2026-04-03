@@ -19,7 +19,7 @@ client = OpenAI(
     },
 )
 
-MODEL_NAME = "mistralai/mistral-7b-instruct:free"
+MODEL_NAME = "meta-llama/llama-3-8b-instruct"
 
 
 def clean_output(text: str) -> str:
