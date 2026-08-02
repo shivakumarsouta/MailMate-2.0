@@ -54,9 +54,13 @@ with col11:
                 st.session_state.email_analyzed = True
 
     if st.session_state.summary:
-        st.success("Email analyzed successfully!")
+        if st.session_state.summary.startswith(("Error:", "The provided text")):
+            st.warning("Could not process analysis. Please provide a valid email or set API key.")
+        else:
+            st.success("Email analyzed successfully!")
         st.write("### 📌 Summary:")
         st.markdown(st.session_state.summary)
+
 with col12:
     # ---- Generate Reply ----
     if st.button("💡 Generate Reply"):
@@ -74,7 +78,11 @@ with col12:
 
     # ---- Edit & Send ----
     if st.session_state.draft_reply:
-        st.success("Reply generated successfully!")
+        if st.session_state.draft_reply.startswith(("Error:", "Hello,\n\nThank you")):
+            st.warning("Could not generate a proper reply. Please provide valid email text or set API key.")
+        else:
+            st.success("Reply generated successfully!")
+
         st.subheader("✍🏻 Review and Send")
 
         subject_input = st.text_input(
